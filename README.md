@@ -47,9 +47,12 @@ Running Unit Test
 Unit tests is performed by using PHPUnit which will become avaialbe after running 'composer install' during offline installation.
 Running unit tests requires console access. You can perform this after following offline installation steps above.
 1. Open your console, navigate to application 'test' folder
-2. Run PHPUnit using the following command:
+2. Run PHPUnit using the following command:.
+
 e.g. (on Windows):
+
     `..\vendor\bin\phpunit.bat --debug`
 
 e.g (on Linux):
+
     `../vendor/bin/./phpunit --debug`

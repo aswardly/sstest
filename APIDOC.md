@@ -41,9 +41,9 @@ If HTTP Auth information is not sent, you will get a HTTP 401 response.
 + The URL given are treated case sensitively, if even only 1 character differs in case, the application will respond with a HTTP 404 page.
 
 ### 1. Create Order
-URL: `http://localhost/CreateOrder`
-METHOD: `HTTP POST`
-Post Variables in request: None
+URL: `http://localhost/CreateOrder`.
+METHOD: `HTTP POST`.
+Post Variables in request: None.
 
 Returns a JSON format containing the Order id
 e.g:
@@ -52,38 +52,38 @@ e.g:
 ````
 
 ### 2. Add Item
-URL: `http://localhost/AddItem`
-METHOD: `HTTP POST`
+URL: `http://localhost/AddItem`.
+METHOD: `HTTP POST`.
 Post Variables in request:
 + **orderId** : id of the order to add the product into. Use the order id returned from 'Create Order' service.
 + **itemId** : id of product to add. Refer to the 'product_id' in table 'm_product' in the database. Some values to try are: 'MBP01' and 'MBA01'.
 + **quantity** : quantity of item to add
 
 ### 3. Edit Item
-URL: `http://localhost/EditItem`
-METHOD: `HTTP POST`
+URL: `http://localhost/EditItem`.
+METHOD: `HTTP POST`.
 Post Variables in request:
 + **orderId** : the id of order to modify.
 + **itemId** : the id of product to modify.
 + **quantity** : quantity of item (the product quantity in the order will be updated with this)
 
 ### 4. Remove Item
-URL: `http://localhost/RemoveItem`
-METHOD: `HTTP POST`
+URL: `http://localhost/RemoveItem`.
+METHOD: `HTTP POST`.
 Post Variables in request:
 + **orderId** : the id of order to modify.
 + **itemId** : the id of product to be deleted.
 
 ### 5. Apply Coupon
-URL: `http://localhost/ApplyCoupon`
-METHOD: `HTTP POST`
+URL: `http://localhost/ApplyCoupon`.
+METHOD: `HTTP POST`.
 Post Variables in request:
 + **orderId** : the id of order to modify.
 + **couponId** : the id of the coupon to be applied. Refer to the 'coupon_id' in table 'm_coupon' in the database. Some values to try are: 'CP123' and 'CP345'.
 
 ### 6. Submit Order
-URL: `http://localhost/SubmitOrder`
-METHOD: `HTTP POST`
+URL: `http://localhost/SubmitOrder`.
+METHOD: `HTTP POST`.
 Post Variables in request:
 + **orderId** : the id of order to submit.
 + **customerName** : name of customer to be added into the order.
@@ -93,43 +93,43 @@ Post Variables in request:
 
 ### 7. Process Order
 **Note**: Requires HTTP Basic Auth, use username: 'admin' and password: 'admin'.
-URL: `http://localhost/ProcessOrder`
-METHOD: `HTTP POST`
+URL: `http://localhost/ProcessOrder`.
+METHOD: `HTTP POST`.
 Post Variables in request:
 + **orderId** : the id of order to process.
 
 ### 8. Submit Payment
-URL: `http://localhost/Payment`
-METHOD: `HTTP POST`
+URL: `http://localhost/Payment`.
+METHOD: `HTTP POST`.
 Post Variables in request:
 + **orderId** : the id of order to process.
 + **paymentProof** : the proof of payment. You can input any value in text format.
 
 ### 9. Add Shipping
 **Note**: Requires HTTP Basic Auth, use username: 'admin' and password: 'admin'.
-URL: `http://localhost/AddShipping`
-METHOD: `HTTP POST`
+URL: `http://localhost/AddShipping`.
+METHOD: `HTTP POST`.
 Post Variables in request:
 + **orderId** : the id of order to add shipping information to.
 + **shippingId** : the shipping id info. You can input any value in text format.
 
 ### 10. Update Shipping
 **Note**: Requires HTTP Basic Auth, use username: 'admin' and password: 'admin'.
-URL: `http://localhost/UpdateShipping`
-METHOD: `HTTP POST`
+URL: `http://localhost/UpdateShipping`.
+METHOD: `HTTP POST`.
 Post Variables in request:
 + **orderId** : the id of order to add shipping information to.
 + **shippingId** : the shipping id info. You can input any value in text format.
 + **shippingStatus** : the shipping status info. Valid values are: 'O' (On process) and 'D' (delivered).
 
 ### 11. Inquiry Shipping
-URL: `http://localhost/InquiryShipping?shippingId=shippingIdValue`
-METHOD: `HTTP GET`
+URL: `http://localhost/InquiryShipping?shippingId=shippingIdValue`.
+METHOD: `HTTP GET`.
 Variables in request query string:
 + **shippingId** : the shipping id info of the order.
 
 ### 12. View Order
-URL: `http://localhost/ViewOrder?orderId=orderIdValue`
-METHOD: `HTTP GET`
+URL: `http://localhost/ViewOrder?orderId=orderIdValue`.
+METHOD: `HTTP GET`.
 Variables in request query string:
 + **orderId** : the order id  to be inquired.
