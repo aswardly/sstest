@@ -28,7 +28,7 @@ class Coupon implements FactoryInterface
         
         return new Mapper(
             $serviceLocator->get('Zend\Db\Adapter\Adapter'), //ask service manager to get Zend\Db\Adapter\Adapter instance
-            'M_COUPON',
+            'm_coupon',
             $serviceLocator->get('Emoneygw\DataMapper\Hydrator\Coupon'),
             new Model(),
             $mapping['nameMapping']

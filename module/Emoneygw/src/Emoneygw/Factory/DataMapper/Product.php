@@ -28,7 +28,7 @@ class Product implements FactoryInterface
         
         return new Mapper(
             $serviceLocator->get('Zend\Db\Adapter\Adapter'), //ask service manager to get Zend\Db\Adapter\Adapter instance
-            'M_PRODUCT',
+            'm_product',
             $serviceLocator->get('Emoneygw\DataMapper\Hydrator\Product'),
             new Model(),
             $mapping['nameMapping']

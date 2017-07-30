@@ -28,7 +28,7 @@ class OrderItem implements FactoryInterface
         
         return new Mapper(
             $serviceLocator->get('Zend\Db\Adapter\Adapter'), //ask service manager to get Zend\Db\Adapter\Adapter instance
-            'T_ORDER_ITEM',
+            't_order_item',
             $serviceLocator->get('Emoneygw\DataMapper\Hydrator\OrderItem'),
             new Model(),
             $mapping['nameMapping'],
