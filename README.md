@@ -5,7 +5,7 @@ Introduction
 ------------
 This is a submission for Salestock Backend Dev test built using Zend Framework 2.
 This application acts as webservice endpoints for the requested business scenario (Order Processing).
-Application is built using the foundation from [Zend Skeleton Application](GitHub - zendframework_ZendSkeletonApplication_ Skeleton application for zend-mvc projects.html)
+Application is built using the foundation from [Zend Skeleton Application](https://github.com/zendframework/ZendSkeletonApplication)
 The ZF2 version used is 2.4.11.
 
 Showcase
