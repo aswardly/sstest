@@ -19,7 +19,7 @@ The data persistence layer is architectured using the Data Mapper pattern.
 
 Online Version
 --------------
-An online version has been deployed [here](http://128.199.104.220/~andi/public/)
+An online version has been deployed [here](http://128.199.104.220/~andi/public/).
 Refer to the [API doc](APIDOC.md) for details on testing.
 
 Offline Installation

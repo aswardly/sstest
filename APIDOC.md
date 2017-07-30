@@ -11,7 +11,7 @@ The following services are provided:
 5. **Apply Coupon** (for applying discount from coupon to the order amount)
 6. **Submit Order** (finalizes order and submits it for further processing)
 7. **Process Order** (performed by admin, process submitted order)
-8. **Submit Payment (for submitting payment proof to the order)
+8. **Submit Payment** (for submitting payment proof to the order)
 9. **Add Shipping** (performed by admin, add shipping information to the order)
 10. **Update Shipping** (performed by admin, add shipping information to the order)
 11. **Inquiry Shipping** (for inquiring shipping information of the order)
@@ -49,6 +49,7 @@ Returns a JSON format containing the Order id
 e.g:
 ```javascript
 ("code": {"code":"S","orderId":"ORDef6c1c5829"})   
+````
 
 ### 2. Add Item
 URL: `http://localhost/AddItem`
