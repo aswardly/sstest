@@ -129,6 +129,7 @@ Post Variables in request:
 URL: `http://localhost/Payment`
 
 METHOD: `HTTP POST`
+
 Post Variables in request:
 + **orderId** : the id of order to process
 
