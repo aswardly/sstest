@@ -25,6 +25,7 @@ Refer to the [API doc](APIDOC.md) for details on testing.
 Offline Installation
 --------------------
 **Note**: Testing the application offline enables you to view the changes persisted in the database.
+
 Prequisites:
 1. Apache 2 Server.
 2. PHP minimum version 5.6.
@@ -45,6 +46,7 @@ You can now run the application. Refer to the [API doc](APIDOC.md) for details o
 Running Unit Test
 -----------------
 Unit tests is performed by using PHPUnit which will become avaialbe after running 'composer install' during offline installation.
+
 Running unit tests requires console access. You can perform this after following offline installation steps above.
 1. Open your console, navigate to application 'test' folder
 2. Run PHPUnit using the following command:.
