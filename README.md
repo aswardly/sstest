@@ -51,8 +51,8 @@ Running unit tests requires console access. You can perform this after following
 
 e.g. (on Windows):
 
-    `..\vendor\bin\phpunit.bat --debug`
+    ..\vendor\bin\phpunit.bat --debug
 
 e.g (on Linux):
 
-    `../vendor/bin/./phpunit --debug`
+    ../vendor/bin/./phpunit --debug
