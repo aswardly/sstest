@@ -12,14 +12,14 @@ Showcase
 --------
 This application is built using Domain Driven Design approach where business logic are made into entities and valueobjects.
 e.g. 'Product' is considered as an entity, while an 'order item' is a valueobject. The 'Order' itself is an aggregate root for accessing a collection of 'order items'.
-The domain models are located at '/module/Emoneygw/src/Emoneygw/Model/Concrete/' and /module/Emoneygw/src/Emoneygw/ValueObject/Concrete/'
+The domain models are located at '**/module/Emoneygw/src/Emoneygw/Model/Concrete/**' and '**/module/Emoneygw/src/Emoneygw/ValueObject/Concrete/**'
 
 This is a fully functional application where all state changes are persisted to database (Mysql). 
-This utilizes ZF2 components such as 'Zend Db' and 'Zend Hydrator'.
+This utilizes ZF2 components such as '**Zend Db**' and '**Zend Hydrator**'.
 The data persistence layer is architectured using the Data Mapper pattern.
-The data mappers are located at '/module/Emoneygw/src/Emoneygw/DataMapper/Concrete/' and /module/Emoneygw/src/Emoneygw/DataMapper/Hydrator/'
+The data mappers are located at '**/module/Emoneygw/src/Emoneygw/DataMapper/Concrete/**' and **/module/Emoneygw/src/Emoneygw/DataMapper/Hydrator/**'
 
-Dependency Injection is handled by utlizing ZF2's built in 'Zend ServiceManager' using Factory classes located at '/module/Emoneygw/src/Emoneygw/Factory/DataMapper/'
+Dependency Injection is handled by utlizing ZF2's built in 'Zend ServiceManager' using Factory classes located at '**/module/Emoneygw/src/Emoneygw/Factory/DataMapper/**'
 
 Online Version
 --------------
@@ -39,17 +39,16 @@ Prequisites:
 
 Installation instructions:
 1. Download or clone source files from repository to your local directory.
-2. Configure a new virtual host in your Apache configuration file. Refer to 'Apache Setup' from [here](https://github.com/zendframework/ZendSkeletonApplication/blob/master/README.md)
-2. Open your console, navigate to source file location, run command: 'composer install' (this is needed so composer will download required libraries).
-3. Create a new database schema in mysql, run the sql commands from file: 'sstest_sql.sql' in the new schema.
-4. Navigate to 'config/autoload' folder, replace the mysql database name in 'global.php' and mysql username and password in 'local.php'. Use the same database name from step 2.
-5. Set directory 'public' as document root in your web server.
+2. Configure a new virtual host in your Apache configuration file. Refer to 'Apache Setup' from [here](https://github.com/zendframework/ZendSkeletonApplication/blob/master/README.md). Set directory '**/public/**' as document root in your web server.
+3. Open your console, navigate to source file location, run command: 'composer install' (this is needed so composer will download required libraries and place them in '**/vendor/**' folder).
+4. Create a new database schema in mysql, run the sql commands from file: 'sstest_sql.sql' in the new schema.
+5. Navigate to '**/config/autoload/**' folder, replace the mysql database name in '**global.php**' and mysql username and password in '**local.php**'. Use the same database name from step 4.
 
 You can now run the application. Refer to the [API doc](APIDOC.md) for details on testing.
 
 Running Unit Test
 -----------------
-Unit tests is performed by using PHPUnit which will become avaialbe after running 'composer install' during offline installation.
+Unit tests are performed by using PHPUnit which will become avaialbe after running '**composer install**' during offline installation.
 The test configuration is located at '/tests' and the unit test code is located at 'test' folder under '/module' (e.g. /module/Emoneygw/test/)
 
 Running unit tests requires console access. You can perform this after following offline installation steps above.
