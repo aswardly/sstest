@@ -52,7 +52,7 @@ Unit tests are performed by using PHPUnit which will become avaialbe after runni
 The test configuration is located at '/tests' and the unit test code is located at 'test' folder under '/module' (e.g. /module/Emoneygw/test/)
 
 Running unit tests requires console access. You can perform this after following offline installation steps above.
-1. Open your console, navigate to application 'test' folder
+1. Open your console, navigate to the '**/test/**' folder
 2. Run PHPUnit using the following command:.
 
 e.g. (on Windows):
@@ -62,3 +62,14 @@ e.g. (on Windows):
 e.g (on Linux):
 
     ../vendor/bin/./phpunit --debug
+
+**Note**: The command tries to execute the PHP Unit located in and parses the '**phpunit.xml**' configuration file in the '**/test/**' folder.
+Alternatively you can navigate to the '**/vendor/bin**' folder and run the command and provide the '**phpunit.xml**' file path in the command:
+
+e.g. (on Windows):
+
+    phpunit.bat --debug --configuration \path\to\test\phpunit.xml
+
+e.g (on Linux):
+
+    ./phpunit --debug --configuration \path\to\test\phpunit.xml
