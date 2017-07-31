@@ -19,7 +19,7 @@ This utilizes ZF2 components such as '**Zend Db**' and '**Zend Hydrator**'.
 The data persistence layer is architectured using the Data Mapper pattern.
 The data mappers are located at '**/module/Emoneygw/src/Emoneygw/DataMapper/Concrete/**' and **/module/Emoneygw/src/Emoneygw/DataMapper/Hydrator/**'
 
-Dependency Injection is handled by utlizing ZF2's built in 'Zend ServiceManager' using Factory classes located at '**/module/Emoneygw/src/Emoneygw/Factory/DataMapper/**'
+Dependency Injection is handled by utlizing ZF2's built in '**Zend ServiceManager**' using Factory classes located at '**/module/Emoneygw/src/Emoneygw/Factory/DataMapper/**'
 
 Online Version
 --------------
