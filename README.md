@@ -1,5 +1,5 @@
-SaleStock Backend Dev Test (API Docs)
-=====================================
+SaleStock Backend Dev Test
+==========================
 
 Introduction
 ------------
