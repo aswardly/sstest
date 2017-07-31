@@ -48,8 +48,8 @@ You can now run the application. Refer to the [API doc](APIDOC.md) for details o
 
 Running Unit Test
 -----------------
-Unit tests are performed by using PHPUnit which will become avaialbe after running '**composer install**' during offline installation.
-The test configuration is located at '/tests' and the unit test code is located at 'test' folder under '/module' (e.g. /module/Emoneygw/test/)
+Unit tests are performed by using PHPUnit which will become available after running '**composer install**' during offline installation.
+The test configuration is located at '/tests' and the unit test code is located at 'test' folder under '/module' (e.g. */module/Emoneygw/test/*)
 
 Running unit tests requires console access. You can perform this after following offline installation steps above.
 1. Open your console, navigate to the '**/test/**' folder
@@ -63,7 +63,7 @@ e.g (on Linux):
 
     ../vendor/bin/./phpunit --debug
 
-**Note**: The command tries to execute the PHP Unit located in and parses the '**phpunit.xml**' configuration file in the '**/test/**' folder.
+**Note**: The command will try to execute PHPUnit located in '*/vendor/bin/*' folder and parses the '**phpunit.xml**' configuration file in the '**/test/**' folder.
 Alternatively you can navigate to the '**/vendor/bin**' folder and run the command and provide the '**phpunit.xml**' file path in the command:
 
 e.g. (on Windows):
