@@ -4,7 +4,7 @@ SaleStock Backend Dev Test
 Introduction
 ------------
 This is a submission for Salestock Backend Dev test built using Zend Framework 2.
-This application acts as webservice endpoints for the requested business scenario (Order Processing).
+This application acts as webservice endpoints for the requested business scenario (Order Processing) using HTTP protocol.
 Application is built using the foundation from [Zend Skeleton Application](https://github.com/zendframework/ZendSkeletonApplication).
 The ZF2 version used is 2.4.11.
 
@@ -12,10 +12,14 @@ Showcase
 --------
 This application is built using Domain Driven Design approach where business logic are made into entities and valueobjects.
 e.g. 'Product' is considered as an entity, while an 'order item' is a valueobject. The 'Order' itself is an aggregate root for accessing a collection of 'order items'.
+The domain models are located at '/module/Emoneygw/src/Emoneygw/Model/Concrete/' and /module/Emoneygw/src/Emoneygw/ValueObject/Concrete/'
 
 This is a fully functional application where all state changes are persisted to database (Mysql). 
 This utilizes ZF2 components such as 'Zend Db' and 'Zend Hydrator'.
 The data persistence layer is architectured using the Data Mapper pattern.
+The data mappers are located at '/module/Emoneygw/src/Emoneygw/DataMapper/Concrete/' and /module/Emoneygw/src/Emoneygw/DataMapper/Hydrator/'
+
+Dependency Injection is handled by utlizing ZF2's built in 'Zend ServiceManager' using Factory classes located at '/module/Emoneygw/src/Emoneygw/Factory/DataMapper/'
 
 Online Version
 --------------
@@ -24,14 +28,14 @@ Refer to the [API doc](APIDOC.md) for details on testing.
 
 Offline Installation
 --------------------
-**Note**: Testing the application offline enables you to view the changes persisted in the database.
+**Note**: Testing the application offline enables you to view the changes persisted in the database after performing the provided API calls.
 
 Prequisites:
 1. Apache 2 Server.
 2. PHP minimum version 5.6.
 3. Mysql Database.
-4. php-intl extension enabled.
-5. PHP Composer, get it from [here](https://getcomposer.org/download/)
+4. php-intl extension enabled. 
+5. PHP Composer must be installed on the OS, get it from [here](https://getcomposer.org/download/)
 
 Installation instructions:
 1. Download or clone source files from repository to your local directory.
@@ -46,6 +50,7 @@ You can now run the application. Refer to the [API doc](APIDOC.md) for details o
 Running Unit Test
 -----------------
 Unit tests is performed by using PHPUnit which will become avaialbe after running 'composer install' during offline installation.
+The test configuration is located at '/tests' and the unit test code is located at 'test' folder under '/module' (e.g. /module/Emoneygw/test/)
 
 Running unit tests requires console access. You can perform this after following offline installation steps above.
 1. Open your console, navigate to application 'test' folder
