@@ -41,6 +41,7 @@ API Format
 e.g. Acessing *http://localhost/createorder* instead of *http://localhost/CreateOrder* will result in HTTP 404 page.
 + Accessing the URLs with the incorrect HTTP method will resul in a failed response.
 
+
 ### 1. Create Order
 
 URL: `http://localhost/CreateOrder`
@@ -59,6 +60,7 @@ e.g:
 }
 ````
 
+
 ### 2. Add Item
 
 URL: `http://localhost/AddItem`
@@ -69,6 +71,7 @@ Post Variables in request:
 + **orderId** : id of the order to add the product into. Use the order id returned from 'Create Order' service.
 + **itemId** : id of product to add. Refer to the 'product_id' in table 'm_product' in the database. Some values to try are: 'MBP01' and 'MBA01'.
 + **quantity** : quantity of item to add
+
 
 ### 3. Edit Item
 
@@ -81,6 +84,7 @@ Post Variables in request:
 + **itemId** : the id of product to modify.
 + **quantity** : quantity of item (the product quantity in the order will be updated with this)
 
+
 ### 4. Remove Item
 
 URL: `http://localhost/RemoveItem`
@@ -91,6 +95,7 @@ Post Variables in request:
 + **orderId** : the id of order to modify.
 + **itemId** : the id of product to be deleted.
 
+
 ### 5. Apply Coupon
 
 URL: `http://localhost/ApplyCoupon`
@@ -100,6 +105,7 @@ METHOD: `HTTP POST`
 Post Variables in request:
 + **orderId** : the id of order to modify.
 + **couponId** : the id of the coupon to be applied. Refer to the 'coupon_id' in table 'm_coupon' in the database. Some values to try are: 'CP123' and 'CP345'.
+
 
 ### 6. Submit Order
 
@@ -114,6 +120,7 @@ Post Variables in request:
 + **customerEmail** : customer e-mail address to be added into the order.
 + **customerAddress** : customer address to be added into the order.
 
+
 ### 7. Process Order
 
 **Note**: Requires HTTP Basic Auth, use username: 'admin' and password: 'admin'
@@ -124,6 +131,7 @@ METHOD: `HTTP POST`
 
 Post Variables in request:
 + **orderId** : the id of order to process.
+
 
 ### 8. Submit Payment
 
@@ -136,6 +144,7 @@ Post Variables in request:
 
 + **paymentProof** : the proof of payment. You can input any value in text format
 
+
 ### 9. Add Shipping
 
 **Note**: Requires HTTP Basic Auth, use username: 'admin' and password: 'admin'
@@ -147,6 +156,7 @@ METHOD: `HTTP POST`
 Post Variables in request:
 + **orderId** : the id of order to add shipping information to.
 + **shippingId** : the shipping id info. You can input any value in text format.
+
 
 ### 10. Update Shipping
 
@@ -161,6 +171,7 @@ Post Variables in request:
 + **shippingId** : the shipping id info. You can input any value in text format.
 + **shippingStatus** : the shipping status info. Valid values are: 'O' (On process) and 'D' (delivered).
 
+
 ### 11. Inquiry Shipping
 
 URL: `http://localhost/InquiryShipping?shippingId=shippingIdValue`
@@ -170,7 +181,7 @@ METHOD: `HTTP GET`
 Variables in request query string:
 + **shippingId** : the shipping id info of the order.
 
-Returns a JSON format containgin the shipping information
+Returns a JSON format containing the shipping information
 
 e.g:
 ```javascript
@@ -183,6 +194,7 @@ e.g:
     }
 }
 ````
+
 
 ### 12. View Order
 
