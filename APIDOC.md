@@ -13,7 +13,7 @@ The following services are provided:
 7. **Process Order** (performed by admin, process submitted order)
 8. **Submit Payment** (for submitting payment proof to the order)
 9. **Add Shipping** (performed by admin, add shipping information to the order)
-10. **Update Shipping** (performed by admin, add shipping information to the order)
+10. **Update Shipping** (performed by admin, update shipping information to the order)
 11. **Inquiry Shipping** (for inquiring shipping information of the order)
 12. **View Order** (for viewing order details) 
 
