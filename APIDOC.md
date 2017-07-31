@@ -20,25 +20,26 @@ The following services are provided:
 Background
 ----------
 The typical business flow steps assumed in this application are as follows:
-1. Customer creates a new empty order by calling 'Create Order' service
-2. Customer can add new item into the order by calling 'Add Item' service, modify item quantity by calling 'Edit Item' service, or remove the item from order by calling 'Remove Item' service.
-3. Customer can also apply a coupon id to the order by calling 'Apply Coupon' service.
-4. Customer then places the order by calling 'Submit Order' service.
-5. Admin then approves the order by calling 'Process Order' service.
-6. Customer submits payment proof by calling 'Submit Payment' service.
-7. Admin then can add shipping information by calling 'Add Shipping' service, and can then update it by calling 'Update Shipping' service
-8. Customer can inquire shipping information by calling 'Shipping Inquiry' serrvice.
-9. Anytime during the whole process both Admin and Customer can view order details by calling 'View Order' service.
+1. Customer creates a new empty order by calling '**Create Order**' service
+2. Customer can add new item into the order by calling '**Add Item**' service, modify item quantity by calling '**Edit Item**' service, or remove the item from order by calling '**Remove Item**' service.
+3. Customer can also apply a coupon id to the order by calling '**Apply Coupon**' service.
+4. Customer then places the order by calling '**Submit Order**' service.
+5. Admin then approves the order by calling '**Process Order**' service.
+6. Customer submits payment proof by calling '**Submit Payment**' service.
+7. Admin then can add shipping information by calling '**Add Shipping**' service, and can then update it by calling '**Update Shipping**' service
+8. Customer can inquire shipping information by calling '**Shipping Inquiry**' serrvice.
+9. Anytime during the whole process both Admin and Customer can view order details by calling '**View Order**' service.
 
 API Format
 ----------
 **NOTE**: 
-+ Hostname assumed in example: http://localhost/
++ Hostname assumed in example: '*http://localhost/*', replace this hostname with '*http://128.199.104.220/~andi/public/*' when testing the online version, and your web server's hostname when testing the offline version.
 + You can send HTTP requests to the URLs listed below by running curl command or using software such as [Postman](https://www.getpostman.com/)
-+ All services performed by admin requires HTTP Basic auth. Use username '**admin**' and password '**admin**' when sending the HTTP request.
-If HTTP Auth information is not sent, you will get a HTTP 401 response.
-+ All service responses are JSON string and contain field named 'code' with the values: **S** (success), **F** (failed), *U* (unauthorized)
-+ The URL given are treated case sensitively, if even only 1 character differs in case, the application will respond with a HTTP 404 page.
++ All services performed by admin requires HTTP Basic Auth in order to protect them being executed by the customer. Use username '**admin**' and password '**admin**' when sending the HTTP request. If HTTP Auth information is not sent, you will get a HTTP 401 response.
++ All service responses are JSON string and contain field named 'code' with the possible values: **S** (success), **F** (failed), **U** (unauthorized).
++ The URLs given are treated in a case sensitive manner, if even only 1 character differs in case, the application will respond with a HTTP 404 page.
+e.g. Acessing *http://localhost/createorder* instead of *http://localhost/CreateOrder* will result in HTTP 404 page.
++ Accessing the URLs with the incorrect HTTP method will resul in a failed response.
 
 ### 1. Create Order
 
