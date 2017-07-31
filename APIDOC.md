@@ -33,18 +33,18 @@ The typical business flow steps assumed in this application are as follows:
 API Format
 ----------
 **NOTE**: 
-+ Hostname assumed in example: '*http://localhost/*', replace this hostname with '*http://128.199.104.220/~andi/public/*' when testing the online version, and your web server's hostname when testing the offline version.
++ Hostname assumed in example is from the online version: '*http://128.199.104.220/~andi/public/*', when testing the offline version, replace this with your web server's hostname.
 + You can send HTTP requests to the URLs listed below by running curl command or using software such as [Postman](https://www.getpostman.com/)
 + All services performed by admin requires HTTP Basic Auth in order to protect them being executed by the customer. Use username '**admin**' and password '**admin**' when sending the HTTP request. If HTTP Auth information is not sent, you will get a HTTP 401 response.
 + All service responses are JSON string and contain field named 'code' with the possible values: **S** (success), **F** (failed), **U** (unauthorized).
 + The URLs given are treated in a case sensitive manner, if even only 1 character differs in case, the application will respond with a HTTP 404 page.
-e.g. Acessing *http://localhost/createorder* instead of *http://localhost/CreateOrder* will result in HTTP 404 page.
+e.g. Acessing *http://128.199.104.220/~andi/public/createorder* instead of *http://128.199.104.220/~andi/public/CreateOrder* will result in HTTP 404 page.
 + Accessing the URLs with the incorrect HTTP method will resul in a failed response.
 
 
 ### 1. Create Order
 
-URL: `http://localhost/CreateOrder`
+URL: `http://128.199.104.220/~andi/public/CreateOrder`
 
 METHOD: `HTTP POST`
 
@@ -63,7 +63,7 @@ e.g:
 
 ### 2. Add Item
 
-URL: `http://localhost/AddItem`
+URL: `http://128.199.104.220/~andi/public/AddItem`
 
 METHOD: `HTTP POST`
 
@@ -75,7 +75,7 @@ Post Variables in request:
 
 ### 3. Edit Item
 
-URL: `http://localhost/EditItem`
+URL: `http://128.199.104.220/~andi/public/EditItem`
 
 METHOD: `HTTP POST`
 
@@ -87,7 +87,7 @@ Post Variables in request:
 
 ### 4. Remove Item
 
-URL: `http://localhost/RemoveItem`
+URL: `http://128.199.104.220/~andi/public/RemoveItem`
 
 METHOD: `HTTP POST`
 
@@ -98,7 +98,7 @@ Post Variables in request:
 
 ### 5. Apply Coupon
 
-URL: `http://localhost/ApplyCoupon`
+URL: `http://128.199.104.220/~andi/public/ApplyCoupon`
 
 METHOD: `HTTP POST`
 
@@ -109,7 +109,7 @@ Post Variables in request:
 
 ### 6. Submit Order
 
-URL: `http://localhost/SubmitOrder`
+URL: `http://128.199.104.220/~andi/public/SubmitOrder`
 
 METHOD: `HTTP POST`
 
@@ -125,7 +125,7 @@ Post Variables in request:
 
 **Note**: Requires HTTP Basic Auth, use username: 'admin' and password: 'admin'
 
-URL: `http://localhost/ProcessOrder`
+URL: `http://128.199.104.220/~andi/public/ProcessOrder`
 
 METHOD: `HTTP POST`
 
@@ -135,7 +135,7 @@ Post Variables in request:
 
 ### 8. Submit Payment
 
-URL: `http://localhost/Payment`
+URL: `http://128.199.104.220/~andi/public/Payment`
 
 METHOD: `HTTP POST`
 
@@ -149,7 +149,7 @@ Post Variables in request:
 
 **Note**: Requires HTTP Basic Auth, use username: 'admin' and password: 'admin'
 
-URL: `http://localhost/AddShipping`
+URL: `http://128.199.104.220/~andi/public/AddShipping`
 
 METHOD: `HTTP POST`
 
@@ -162,7 +162,7 @@ Post Variables in request:
 
 **Note**: Requires HTTP Basic Auth, use username: 'admin' and password: 'admin'
 
-URL: `http://localhost/UpdateShipping`
+URL: `http://128.199.104.220/~andi/public/UpdateShipping`
 
 METHOD: `HTTP POST`
 
@@ -174,7 +174,7 @@ Post Variables in request:
 
 ### 11. Inquiry Shipping
 
-URL: `http://localhost/InquiryShipping?shippingId=shippingIdValue`
+URL: `http://128.199.104.220/~andi/public/InquiryShipping?shippingId=shippingIdValue`
 
 METHOD: `HTTP GET`
 
@@ -198,7 +198,7 @@ e.g:
 
 ### 12. View Order
 
-URL: `http://localhost/ViewOrder?orderId=orderIdValue`
+URL: `http://128.199.104.220/~andi/public/ViewOrder?orderId=orderIdValue`
 
 METHOD: `HTTP GET`
 
